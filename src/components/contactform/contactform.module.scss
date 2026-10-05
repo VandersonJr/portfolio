@@ -1,0 +1,195 @@
+@media (max-width: 2560px) {
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120%;
+    padding: 2rem 1.25rem;
+
+    .form {
+      width: 100%;
+      max-width: 28.125rem;
+      padding: 2rem;
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(147, 51, 234, 0.16),
+          transparent 40%
+        ),
+        radial-gradient(
+          circle at 90% 80%,
+          rgba(37, 99, 235, 0.16),
+          transparent 40%
+        ),
+        rgba(5, 8, 15, 0.75);
+
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 1.5rem;
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      .formGroup {
+        margin-bottom: 1.25rem;
+
+        .label {
+          display: block;
+
+          margin-bottom: 0.5rem;
+
+          font-family: "Inter", sans-serif;
+          font-size: 0.95rem;
+          font-weight: 600;
+
+          color: #ffffff;
+        }
+
+        .input,
+        .textarea {
+          width: 100%;
+          box-sizing: border-box;
+
+          padding: 0.8rem 0.9rem;
+
+          background: rgba(255, 255, 255, 0.04);
+
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 0.6rem;
+
+          font-family: "Inter", sans-serif;
+          font-size: 0.9375rem;
+
+          color: #ffffff;
+
+          outline: none;
+
+          transition:
+            border-color 0.3s ease,
+            background-color 0.3s ease,
+            box-shadow 0.3s ease;
+
+          &::placeholder {
+            color: #64748b;
+          }
+
+          &:focus {
+            border-color: rgba(37, 99, 235, 0.8);
+
+            background: rgba(37, 99, 235, 0.05);
+
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+          }
+
+          &.error {
+            border-color: #ef4444;
+
+            background: rgba(239, 68, 68, 0.05);
+
+            &:focus {
+              border-color: #ef4444;
+
+              box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+            }
+          }
+        }
+
+        .textarea {
+          min-height: 7.5rem;
+
+          resize: vertical;
+        }
+
+        .errorText {
+          display: block;
+
+          margin-top: 0.35rem;
+
+          font-family: "Inter", sans-serif;
+          font-size: 0.8125rem;
+
+          color: #f87171;
+        }
+      }
+
+      .butEnviar {
+        width: 100%;
+        padding: 0.85rem;
+        background: linear-gradient(90deg, #2563eb, #9333ea);
+        border: none;
+        border-radius: 0.6rem;
+        color: #ffffff;
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          opacity 0.3s ease;
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow:
+            0 8px 20px rgba(37, 99, 235, 0.2),
+            0 8px 20px rgba(147, 51, 234, 0.15);
+        }
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+          transform: none;
+          box-shadow: none;
+        }
+      }
+
+      .status {
+        margin-top: 1rem;
+        text-align: center;
+        font-family: "Inter", sans-serif;
+        font-size: 0.875rem;
+        color: #94a3b8;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+
+    .form {
+      max-width: 100%;
+      padding: 1.5rem 1.25rem;
+      border-radius: 1.25rem;
+      box-sizing: border-box;
+
+      .formGroup {
+        margin-bottom: 1rem;
+
+        .label {
+          font-size: 0.9rem;
+        }
+
+        .input,
+        .textarea {
+          padding: 0.75rem 0.85rem;
+          // 1rem (16px) evita o zoom automático do iOS ao focar no campo
+          font-size: 1rem;
+        }
+
+        .textarea {
+          min-height: 6.5rem;
+        }
+      }
+
+      .butEnviar {
+        padding: 0.9rem;
+        font-size: 1rem;
+      }
+
+      .status {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
