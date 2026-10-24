@@ -43,27 +43,36 @@ const Footer = () => {
           <h1 className={S.titRedes}>Redes Sociais</h1>
           <div className={S.campGithub}>
             <FaGithub className={S.iconGithub} />
-            <Link to="https://github.com/VandersonJr" className={S.Link}>
+            <a
+              href="https://github.com/VandersonJr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={S.Link}
+            >
               VandersonJr
-            </Link>
+            </a>
           </div>
           <div className={S.campLinkedin}>
             <FaLinkedin className={S.iconLinkedin} />
-            <Link
-              to="https://www.linkedin.com/in/vandersonsjr/"
+            <a
+              href="https://www.linkedin.com/in/vandersonsjr/"
+              target="_blank"
+              rel="noopener noreferrer"
               className={S.Link}
             >
               Vanderson Jr.
-            </Link>
+            </a>
           </div>
           <div className={S.campInstagram}>
             <FaInstagram className={S.iconInstagram} />
-            <Link
-              to="https://www.instagram.com/vandersonsjr_dev/"
+            <a
+              href="https://www.instagram.com/vandersonsjr_dev/"
+              target="_blank"
+              rel="noopener noreferrer"
               className={S.Link}
             >
               vandersonsjr_dev
-            </Link>
+            </a>
           </div>
         </div>
       </section>

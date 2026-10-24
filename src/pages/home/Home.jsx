@@ -1,18 +1,13 @@
 import * as S from "./home.module.scss";
 import PerfilUm from "../../assets/perfilum.png";
 import PerfilDois from "../../assets/perfildois.png";
-import {
-  FaCode,
-  FaPalette,
-  FaBolt,
-  FaPhone,
-  FaMapLocationDot,
-} from "react-icons/fa6";
+import { FaCode, FaPalette, FaBolt, FaMapLocationDot } from "react-icons/fa6";
 import { MdOutlineOpenInNew, MdOutlineMail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import LogoUm from "../../assets/logo_copy.png";
 import LogoDois from "../../assets/logo.png";
 import LogoTres from "../../assets/logo_med.png";
+import LogoQuatro from "../../assets/LogoQuatro.png";
 import ContactForm from "../../components/contactform/ContactForm";
 const Home = () => {
   return (
@@ -164,6 +159,30 @@ const Home = () => {
               <MdOutlineOpenInNew className={S.butLink} />
               <a
                 href="https://bn-detailer.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={S.link}
+              >
+                Ir para a página
+              </a>
+            </div>
+          </div>
+          <div className={S.projQuatro}>
+            <div className={S.campimgQuatro}>
+              <img
+                src={LogoQuatro}
+                alt="Logo do projeto Travel.com"
+                className={S.imgLogoQuatro}
+              />
+            </div>
+            <h3 className={S.titProjQuatro}>Projeto Travel</h3>
+            <p className={S.pagTitQuatro}>
+              Página desenvolvida como projeto autônomo de treino.
+            </p>
+            <div className={S.butPag}>
+              <MdOutlineOpenInNew className={S.butLink} />
+              <a
+                href="https://react-curso-travel-rho.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={S.link}

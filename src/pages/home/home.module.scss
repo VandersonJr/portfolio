@@ -150,12 +150,12 @@
           .cardsSobre {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
-            gap: 2rem;
+            gap: 1rem;
             .cardCode {
               display: flex;
-              width: 30%;
+              width: 15.625rem;
               flex-direction: column;
               align-items: center;
               justify-content: center;
@@ -195,7 +195,7 @@
             }
             .cardDesign {
               display: flex;
-              width: 30%;
+              width: 15.625rem;
               flex-direction: column;
               align-items: center;
               justify-content: center;
@@ -235,7 +235,7 @@
             }
             .cardTunder {
               display: flex;
-              width: 30%;
+              width: 15.625rem;
               flex-direction: column;
               align-items: center;
               justify-content: center;
@@ -283,6 +283,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      width: 100%;
       .titProjetos {
         margin: 1rem;
         font-size: 2rem;
@@ -296,9 +297,17 @@
       .campCards {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        gap: 0.625rem;
-        padding: 1.25rem;
+        // Mude de space-between para flex-start para manter os cards alinhados sequencialmente
+        justify-content: flex-start;
+        gap: 1.5rem; // Aumentei um pouco para dar respiro, ajuste se preferir
+        padding: 1.25rem 1.25rem 2rem 1.25rem; // Padding extra embaixo para a barra de rolagem
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        max-width: 100%;
+        &::-webkit-scrollbar {
+          height: 8px;
+        }
+
         .projUm {
           background: rgba(255, 255, 255, 0.035);
           display: flex;
@@ -331,14 +340,14 @@
           .titProjUm {
             font-family: "Jost", sans-serif;
             font-weight: 350;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             background: linear-gradient(135deg, #dc59f2, #3be0ff, #dc59f2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
           .pagTitUm {
             font-family: "Inter", sans-serif;
-            font-size: 1rem;
+            font-size: 0.85rem;
             color: #cfc7db;
             text-align: center;
           }
@@ -415,14 +424,14 @@
           .titProjDois {
             font-family: "Jost", sans-serif;
             font-weight: 350;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             background: linear-gradient(135deg, #dc59f2, #3be0ff, #dc59f2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
           .pagTitDois {
             font-family: "Inter", sans-serif;
-            font-size: 1rem;
+            font-size: 0.85rem;
             color: #cfc7db;
             text-align: center;
           }
@@ -496,14 +505,107 @@
           .titProjTres {
             font-family: "Jost", sans-serif;
             font-weight: 350;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             background: linear-gradient(135deg, #dc59f2, #3be0ff, #dc59f2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
           .pagTitTres {
             font-family: "Inter", sans-serif;
+            font-size: 0.85rem;
+            color: #cfc7db;
+            text-align: center;
+          }
+          .butPag {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 0.625rem;
+            width: 12.5rem;
+            padding: 0.6rem 1.5rem;
+            border: 1px solid rgba(37, 99, 235, 0.5);
+            border-radius: 10px;
+            background: rgba(37, 99, 235, 0.15);
+            color: #60a5fa;
+            font-family: "Inter", sans-serif;
             font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition:
+              background 0.3s ease,
+              border-color 0.3s ease,
+              color 0.3s ease,
+              transform 0.3s ease;
+            margin-top: auto;
+            &:hover {
+              background: linear-gradient(
+                90deg,
+                rgba(37, 99, 235, 0.8),
+                rgba(147, 51, 234, 0.8)
+              );
+              border-color: transparent;
+              color: #ffffff;
+              transform: translateY(-2px);
+            }
+            .butLink {
+              font-size: 20px;
+              color: white;
+            }
+            .link {
+              color: white;
+            }
+          }
+        }
+        .projQuatro {
+          background: rgba(255, 255, 255, 0.035);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1.5rem;
+          width: 28rem;
+          padding: 1.5rem;
+          border-radius: 1.5rem;
+          border: 2px solid rgba(255, 255, 255, 0.15);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+          &:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+          }
+          &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+          }
+          &::-webkit-scrollbar-thumb {
+            background: rgba(60, 224, 255, 0.4);
+            border-radius: 10px;
+            &:hover {
+              background: rgba(60, 224, 255, 0.7);
+            }
+          }
+          .campimgQuatro {
+            .imgLogoQuatro {
+              width: 5rem;
+              border-radius: 10%;
+              background: black;
+            }
+          }
+          .titProjQuatro {
+            font-family: "Jost", sans-serif;
+            font-weight: 350;
+            font-size: 1.25rem;
+            background: linear-gradient(135deg, #dc59f2, #3be0ff, #dc59f2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          .pagTitQuatro {
+            font-family: "Inter", sans-serif;
+            font-size: 0.85rem;
             color: #cfc7db;
             text-align: center;
           }
@@ -855,11 +957,13 @@
 
         .projUm,
         .projDois,
-        .projTres {
+        .projTres,
+        .projQuatro {
           width: 100%;
           max-width: 28rem;
           padding: 1.25rem;
           box-sizing: border-box;
+          text-align: center;
         }
       }
     }
@@ -989,7 +1093,7 @@
             .cardCode,
             .cardDesign,
             .cardTunder {
-              width: 30%;
+              width: 25%;
               box-sizing: border-box;
               padding: 1.25rem 0.75rem;
             }
@@ -1028,7 +1132,8 @@
 
         .projUm,
         .projDois,
-        .projTres {
+        .projTres,
+        .projQuatro {
           width: calc(50% - 0.75rem);
           min-width: 18rem;
           padding: 1.25rem;
